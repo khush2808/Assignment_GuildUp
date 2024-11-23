@@ -23,12 +23,11 @@ export default function Posts() {
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/posts')
       const data = await response.json()
-      setPosts(data.slice(0, 10)) // Limiting to 10 posts for this example
+      setPosts(data) // Limiting to 10 posts for this example
+			setIsLoading(false)
     } catch (error) {
       console.error('Error fetching posts:', error)
-    } finally {
-      setIsLoading(false)
-    }
+    } 
   }
 
   const handleShare = (post: PostData) => {

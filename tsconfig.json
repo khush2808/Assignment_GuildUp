@@ -9,6 +9,9 @@
 		}
 	],
 	"compilerOptions": {
+		"moduleResolution": "node16", // or "nodenext" or "bundler"
+		"module": "Node16",
+    "allowImportingTsExtensions": true,
 		"esModuleInterop": true,
 		"jsx": "react-jsx",
 		"baseUrl": ".",
